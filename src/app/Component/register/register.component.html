@@ -1,0 +1,78 @@
+<div class="regpage">
+    <div class="register">
+        <div class="image">
+            <img class="img" src="../../../assets/Google_2015_logo.svg.png">
+            <p id="p1">Create your Google Account</p>
+        </div>
+        <form [formGroup]="registerForm" (ngSubmit)="RegisterSubmit()">
+            <div class="box1">
+                <mat-form-field appearance="outline">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="firstname" formControlName="firstname">
+                    <mat-error *ngIf="registerForm.hasError('required','firstname')">
+                        firstname is Required!
+                    </mat-error>
+                    <mat-error *ngIf="registerForm.hasError('pattern','firstname')">
+                        firstname is not valid!
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="lastname" formControlName="lastname">
+                    <mat-error *ngIf="registerForm.hasError('required','lastname')">
+                        lastname is Required!
+                    </mat-error>
+                    <mat-error *ngIf="registerForm.hasError('pattern','lastname')">
+                        lastname is not valid!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        
+
+            <div class="box2">
+                <p>Create a Gmail address for signing in to your Google Account</p>
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="email">
+                    <mat-error *ngIf="registerForm.hasError('required','email')">
+                        email is Required!
+                    </mat-error>
+                    <mat-error *ngIf="registerForm.hasError('email','email')">
+                        email is not valid!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="box3">
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" formControlName="Password">
+                    <mat-error *ngIf="registerForm.hasError('required','Password')">
+                        Password is Required!
+                    </mat-error>
+                    <mat-error *ngIf="registerForm.hasError('pattern','Password')">
+                        Password is not valid!
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Confirm Password</mat-label>
+                    <input matInput placeholder="Confirm Password" formControlName="ConfirmPassword">
+                    <mat-error *ngIf="registerForm.hasError('required','ConfirmPassword')">
+                        Password is Required!
+                    </mat-error>
+                    <mat-error *ngIf="registerForm.hasError('pattern','ConfirmPassword')">
+                        Confirm Password is not valid!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="checkbox-container">
+                <input type="checkbox" id="showpassword">
+                <label for="Password">Show Password</label>
+            </div>
+            <div class="buttons">
+                <button mat-button color="primary">Sign In Instead</button>
+                <button mat-raised-button color="primary" id="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

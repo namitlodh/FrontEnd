@@ -1,0 +1,45 @@
+<div class="main">
+    <div class="container">
+        <div class="login">
+            <div class="image">
+                <img class="img" src="../../../assets/Google_2015_logo.svg.png">
+            </div>
+            <div>
+                <p>Sign In</p>
+                <p id="f1">Use Your Google Account</p>
+            </div> 
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="LoginSubmit()">
+            <div class="box">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email or phone</mat-label>
+                    <input matInput placeholder="Email or Phone" formControlName="email">
+                    <mat-error *ngIf="loginForm.hasError('required','email')">
+                        email is Required!
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.hasError('email','email')">
+                        email is not valid!
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput placeholder="Password" formControlName="Password">
+                    <mat-error *ngIf="loginForm.hasError('required','Password')">
+                        password is Required!
+                    </mat-error>
+                    <mat-error *ngIf="loginForm.hasError('pattern','Password')">
+                        Password is not valid!
+                    </mat-error>
+                </mat-form-field>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="showpassword">
+                    <label for="Password">Show Password</label>
+                </div>
+            </div>
+            <div class="f3">
+                <button mat-button color="primary">Forgot Password?</button>
+                <button mat-raised-button color="primary" id="next-button">Next</button>
+            </div>
+        </form>
+    </div>
+</div>
