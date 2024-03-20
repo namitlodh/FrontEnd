@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../Services/userService/user.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -8,8 +10,10 @@ import { UserService } from '../../Services/userService/user.service';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent implements OnInit {
+  hide=true;
+  submitted=false;
   loginForm!:FormGroup;
-  constructor(private formBuilder: FormBuilder, private userService: UserService){}
+  constructor(private formBuilder: FormBuilder, private userService: UserService, private route:Router){}
   ngOnInit(): void {
     this.loginForm= this.formBuilder.group(
       {
@@ -20,6 +24,8 @@ export class LoginComponent implements OnInit {
   }
 
   LoginSubmit(){
+    this.submitted=true;
+    if(this.loginForm.valid){
     let reqData={
       email: this.loginForm.value.email,
       Password: this.loginForm.value.Password
@@ -27,6 +33,9 @@ export class LoginComponent implements OnInit {
 
     this.userService.login(reqData).subscribe((res:any)=>{
       console.log(res);
-    })
+      localStorage.setItem("token",res.data);
+      this.route.navigateByUrl("keep/getnotes");
+    })}
+    else{console.log("Invalid Inputs")}
   }
 }

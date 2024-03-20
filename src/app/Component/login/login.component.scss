@@ -39,10 +39,14 @@
   .f3 {
     display: flex;
     margin-top: 20px;
-    column-gap: 18vh;
+    gap: 11vw;
     
   }
   
+  .checkbox-container{
+    display: flex;
+    gap: 5vw;
+  }
   #next-button{
     background-color: rgb(45, 46, 120);
   }

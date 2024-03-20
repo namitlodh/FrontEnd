@@ -23,7 +23,7 @@
                 </mat-form-field>
                 <mat-form-field appearance="outline">
                     <mat-label>Password</mat-label>
-                    <input matInput placeholder="Password" formControlName="Password">
+                    <input matInput placeholder="Password" formControlName="Password" [type]="hide ? 'password' : 'text'">
                     <mat-error *ngIf="loginForm.hasError('required','Password')">
                         password is Required!
                     </mat-error>
@@ -32,12 +32,18 @@
                     </mat-error>
                 </mat-form-field>
                 <div class="checkbox-container">
-                    <input type="checkbox" id="showpassword">
-                    <label for="Password">Show Password</label>
+                    <div class="show">
+                        <mat-checkbox id="showpassword" color="primary" (change)="hide=!hide">Show Password</mat-checkbox>
+                        <!-- <input type="checkbox" id="showpassword">
+                        <label for="Password">Show Password</label> -->
+                    </div>
+                    <div class="forget">
+                        <button mat-button color="primary">Forgot Password?</button>
+                    </div>
                 </div>
             </div>
             <div class="f3">
-                <button mat-button color="primary">Forgot Password?</button>
+                <a href="http://localhost:4200/reg" style="text-decoration: none;font-size: 110%;">Create Account</a>
                 <button mat-raised-button color="primary" id="next-button">Next</button>
             </div>
         </form>
