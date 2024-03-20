@@ -1,0 +1,57 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+    <div class="logo-container">
+        <button class="logo" (click)="toggleCollapse()">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>   
+    </div>
+    <ul class="sidenav-nav">
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class=" sidenav-nav-link " [routerLink]="[data.routeLink2]">
+                <span class="material-symbols-outlined">
+                    lightbulb
+                </span>
+                <i class="sidenav-link-icon " [class]="data.icon"></i>
+                <span class="sidenav-link-text " *ngIf="collapsed">{{data.label}}</span>
+            </a>
+        </li>
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class=" sidenav-nav-link " [routerLink]="[data.routeLink]">
+                <span class="material-symbols-outlined">
+                    notifications
+                    </span>
+                <i class="sidenav-link-icon " [class]="data.icon"></i>
+                <span class="sidenav-link-text " *ngIf="collapsed">{{data.label1}}</span>
+            </a>
+        </li>
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class=" sidenav-nav-link " [routerLink]="[data.routeLink]">
+                <span class="material-symbols-outlined">
+                    edit
+                    </span>
+                <i class="sidenav-link-icon " [class]="data.icon"></i>
+                <span class="sidenav-link-text " *ngIf="collapsed">{{data.label2}}</span>
+            </a>
+        </li>
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class=" sidenav-nav-link " [routerLink]="[data.routeLink1]">
+                <!-- <a href="http://localhost:4200/archive"class=" sidenav-nav-link "> -->
+                <span class="material-symbols-outlined" >
+                    archive
+                </span>
+                <i class="sidenav-link-icon " [class]="data.icon"></i>
+                <span class="sidenav-link-text " *ngIf="collapsed">{{data.label3}}</span>
+            </a>
+        </li>
+        <li class="sidenav-nav-item" *ngFor="let data of navData">
+            <a class=" sidenav-nav-link " [routerLink]="[data.routeLink3]">
+                <span class="material-symbols-outlined">
+                    delete
+                    </span>
+                <i class="sidenav-link-icon " [class]="data.icon"></i>
+                <span class="sidenav-link-text " *ngIf="collapsed">{{data.label4}}</span>
+            </a>
+        </li>
+    </ul>
+</div>
