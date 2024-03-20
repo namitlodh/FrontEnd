@@ -1,0 +1,100 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: whitesmoke;
+}
+
+.signin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+
+#c1{
+    font-size: 4vh;
+    color: white;
+    margin-top: 7%;
+}
+#c2{
+    color: white;
+}
+
+.loginpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 25vw;
+    border-radius: 5vh;
+    background-color: rgb(28, 15, 64);
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    height: 90vh;
+    width: 25vw;
+    border-radius: 5vh;
+    background-color: white;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#login{
+    font-size: 3vh;
+}
+
+.f1{
+    display: flex;
+    gap: 15%;
+}
+
+.f2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+#next-button{
+    background-color: rgb(28, 15, 64);
+}
+#s1{
+    color: black;
+    font-size: 2vh;
+}
+#s2{
+    color: rgb(38, 15, 101);
+}
+
+// .EmailInput
+// {
+//     width: 330px;
+//     height: 45px;
+//     border-radius: 15px;
+//     border: 0px;
+//     background-color: rgb(215, 215, 215);
+//     font-size: 15px;
+//     font-weight: bold;
+//     padding-left: 10px;
+// }
+// .EmailInput::placeholder
+// {
+//     color: white;
+//     padding-left: 10px;
+//     font-size: 15px;
+//     font-weight: bold;
+// }

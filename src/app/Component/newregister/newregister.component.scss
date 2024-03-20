@@ -1,0 +1,81 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(245, 245, 245);
+}
+
+.signin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#c1{
+    font-size: 4vh;
+    color: white;
+    margin-top: 7%;
+}
+#c2{
+    color: white;
+}
+
+.registerpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 25vw;
+    border-radius: 5vh;
+    background-color: rgb(28, 15, 64);
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 25vw;
+    
+    border-radius: 5vh;
+    background-color: white;
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#login{
+    font-size: 3vh;
+}
+
+
+
+.f2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    gap: 1vh;
+}
+
+#next-button{
+    background-color: rgb(28, 15, 64);
+}
+#signup-button{
+    color: black;
+    background-color: white;
+}
+
+#s1{
+    font-size: 1.5vh;
+    color: black;
+}
+#s2{
+    color: rgb(38, 15, 101);
+}
