@@ -1,0 +1,55 @@
+<!-- <div *ngFor="let notes of notesList" class="card">
+    <mat-card class="notesContainer">
+        <mat-card-title role="textbox"class="title"  style="display: block; overflow-wrap: break-word;">{{notes.title}}
+            <button class="kee1">
+                <span class="material-symbols-outlined">
+                    keep
+                </span>
+            </button>
+        </mat-card-title>
+        <mat-card-content>
+            <div role="textbox" class="text" style="min-height: 35px; display: block; overflow-wrap: break-word;">
+                {{notes.description}}
+            </div>
+        </mat-card-content>
+        
+    </mat-card>
+</div> -->
+
+
+<div *ngFor="let notes of notesList" class="card">
+    <div class="box2">
+        <mat-card class="notesContainer" [style.background]="notes.colour">
+            <!-- <div class="div1"> -->
+                <button class="kee1">
+                    <span class="material-symbols-outlined">
+                        keep
+                    </span>
+                </button>
+                <mat-card-title role="textbox" class="title"  style="display: block; overflow-wrap: break-word;" (click)="editNoteDialogBox(notes)">{{notes.title}}
+                </mat-card-title>
+            <!-- </div> -->
+            <!-- <div class="div2"> -->
+                <mat-card-content>
+                    <div role="textbox" class="text" style="min-height: 35px; display: block; overflow-wrap: break-word;" (click)="editNoteDialogBox(notes)">
+                        {{notes.description}}
+                    </div>
+                </mat-card-content>
+            <!-- </div> -->
+            <div class="div3">
+                <app-noteicons [notesObject]="notes" (eventchange)="eventupdatenote($event)"></app-noteicons>
+                <!-- <button class="six">
+                    <span class="material-symbols-outlined">
+                        undo
+                        </span>
+                </button>
+                <button class="seven">
+                    <span class="material-symbols-outlined">
+                        redo
+                        </span>
+                </button>
+                <button class="eig">Close</button>    -->
+            </div>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,81 @@
+.card{
+    display: flex;
+    margin-bottom: 8px;
+    display:table-row;
+}
+
+.notesContainer{
+    padding: 10px;
+    border: 1px solid lightgrey;
+    margin:10px;
+    width:300px;
+    box-shadow: none;
+}
+
+.kee1 {
+    text-align: right; /* This aligns the text inside the element to the right */
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 0.313rem;
+    padding: 0.313rem;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    border: none;
+    height: 5vh;
+    background-color: transparent;
+    position: absolute; /* Positions the element absolutely */
+    top: 0; /* Aligns the pin to the top */
+    right: 0; /* Aligns the pin to the extreme right */
+}
+
+
+.material-symbols-outlined {
+    color: rgb(181, 181, 181);
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
+// .kee1 {
+//     text-align: right;
+//     width: 3rem;
+//     min-width: 3rem;
+//     border-radius: 0.313rem;
+//     padding: 0.313rem;
+//     font-size: 24px;
+//     font-weight: 900;
+//     cursor: pointer;
+//     border: none;
+//     height:5vh ;
+//     background-color: transparent;
+// }
+
+.kee1:hover{
+    background-color: rgb(240, 238, 238);
+    border-radius: 3vh;
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.text{
+    display: flex;
+    // min-height: 35px; 
+    // display: block; 
+    // overflow-wrap: break-word;
+}
+
+.div1{
+    display: flex;
+    //justify-content: space-around;
+}
+.div2{
+    display: flex;
+}
+.div3{
+    display: flex;
+}
