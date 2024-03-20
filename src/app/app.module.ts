@@ -13,6 +13,23 @@ import { MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NewloginComponent } from './Component/newlogin/newlogin.component';
+import { NewregisterComponent } from './Component/newregister/newregister.component';
+import { SidenavComponent } from './Component/sidenav/sidenav.component';
+import { KeepComponent } from './Component/keep/keep.component';
+import { AuthService } from './Services/Auth/auth.service';
+import { CreatenoteComponent } from './Component/createnote/createnote.component';
+import { NoteiconsComponent } from './Component/noteicons/noteicons.component';
+import { DisplaynoteComponent } from './Component/displaynote/displaynote.component';
+import {MatCardModule} from '@angular/material/card';
+import { GetnoteComponent } from './Component/getnote/getnote.component';
+import { UpdatenoteComponent } from './Component/updatenote/updatenote.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ArchivenoteComponent } from './Component/archivenote/archivenote.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { TrashnoteComponent } from './Component/trashnote/trashnote.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +37,18 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     RegisterComponent,
     ForgotpasswordComponent,
-    ResetpasswordComponent
+    ResetpasswordComponent,
+    NewloginComponent,
+    NewregisterComponent,
+    SidenavComponent,
+    KeepComponent,
+    CreatenoteComponent,
+    NoteiconsComponent,
+    DisplaynoteComponent,
+    GetnoteComponent,
+    UpdatenoteComponent,
+    ArchivenoteComponent,
+    TrashnoteComponent
   ],
   imports: [
     BrowserModule,
@@ -28,12 +56,17 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     MatCheckboxModule,
     MatInputModule,
+    MatCardModule,
+    MatDialogModule,
+    MatMenuModule,
     FormsModule,ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    AuthService,
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent]
 })

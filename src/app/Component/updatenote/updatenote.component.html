@@ -1,0 +1,33 @@
+<div [style.background]="data.color">
+    <div class="text-Title">
+        <button class="kee1">
+            <span class="material-symbols-outlined">
+                keep
+            </span>
+        </button>
+        <mat-card-title><input matInput [(ngModel)]="title" [style.background]="data.color" class="inputtitle">
+        </mat-card-title>
+    </div>
+    <div class="text-body">
+        <input matInput [style.background]="data.color" [(ngModel)]="description" class="inputdesc">
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-between end" class="icons">
+        <div class="icons">
+            <app-noteicons></app-noteicons>
+            <!-- style="opacity: 0.9; background: none; border: none;" -->
+            <button class="six">
+                <span class="material-symbols-outlined">
+                    undo
+                    </span>
+            </button>
+            <button class="seven">
+                <span class="material-symbols-outlined">
+                    redo
+                    </span>
+            </button>
+            <button mat-icon-button class="close" (click)="closeDialog()" >
+                Close
+            </button>
+        </div>
+    </div>
+</div>
