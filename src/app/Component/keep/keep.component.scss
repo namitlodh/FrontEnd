@@ -1,0 +1,146 @@
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    border: 1px solid grey;
+    height: 4rem;
+}
+.logo{
+    display: flex;
+    justify-content: start;
+    margin-left: 1.5%;
+    .options {
+        background: #fff;
+        text-align: center;
+        width: 3rem;
+        min-width: 3rem;
+        border-radius: 0.313rem;
+        padding: 0.313rem;
+        font-size: 24px;
+        font-weight: 900;
+        cursor: pointer;
+        border: none;
+    }
+}
+.icon{
+    display: flex;
+    margin-left: 2%;
+}
+.img{
+    width: 2vw;
+    height: 6vh;
+}
+
+#h1{
+    margin-left: 15%;
+    margin-top: 12%;
+    font-size: 25px;
+    color: rgb(158, 158, 158);
+    font-weight: lighter;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search{
+    display: flex;
+    flex-direction: row;
+    margin-left: 8%;
+    width: 700px;
+    height: 45px;
+    border-radius: 15px;
+    border: 0px;
+    background-color: rgb(240, 240, 240);
+    font-size: 15px;
+    font-weight: lighter;
+    color: black;
+    padding-left: 10px;
+}
+#i1{
+    margin-top: 1.8%;
+}
+
+.Input{
+    width: 500px;
+    height: 40px;
+    border-radius: 15px;
+    border: 0px rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+    font-size: 15px;
+    font-weight: lighter;
+    color: black;
+    padding-left: 10px;
+    
+}
+.Input:focus{
+    outline: none;
+}
+.Input::placeholder
+{
+    color: gray;
+    padding-left: 10px;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    margin-left: 25%;
+    justify-content: space-around;
+    .refresh {
+        background: #fff;
+        text-align: center;
+        width: 3rem;
+        min-width: 3rem;
+        border-radius: 0.313rem;
+        padding: 0.313rem;
+        font-size: 24px;
+        font-weight: 900;
+        cursor: pointer;
+        border: none;
+    }
+
+    .viewlist {
+        background: #fff;
+        text-align: center;
+        width: 3rem;
+        min-width: 3rem;
+        border-radius: 0.313rem;
+        padding: 0.313rem;
+        font-size: 24px;
+        font-weight: 900;
+        cursor: pointer;
+        border: none;
+    }
+
+    .settings {
+        background: #fff;
+        text-align: center;
+        width: 3rem;
+        min-width: 3rem;
+        border-radius: 0.313rem;
+        padding: 0.313rem;
+        font-size: 24px;
+        font-weight: 900;
+        cursor: pointer;
+        border: none;
+    }
+}
+
+.menu{
+    display: flex;
+    flex-direction: row;
+    margin-left: 3%;
+    .apps {
+        background: #fff;
+        text-align: center;
+        width: 3rem;
+        min-width: 3rem;
+        border-radius: 0.313rem;
+        padding: 0.313rem;
+        font-size: 24px;
+        font-weight: 900;
+        cursor: pointer;
+        border: none;
+    }
+}
