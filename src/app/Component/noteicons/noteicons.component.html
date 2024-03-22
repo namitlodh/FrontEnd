@@ -37,9 +37,11 @@
         <button mat-menu-item >Make a copy</button>
         <button mat-menu-item >Show checkboxes</button>
     </mat-menu>
-    <mat-menu #paletteMenu="matMenu" xPosition="before" >
-        <div *ngFor='let colors of colorArray' class="colors"> 
-            <button class="colorIcon" [style.background]="colors.code" (click)="selectcolor(colors)"></button>
+    <mat-menu #paletteMenu="matMenu" xPosition="before" class="platte">
+        <div class="color">
+            <div *ngFor='let colors of colorArray'> 
+                <button class="colorIcon" [style.background]="colors.code" (click)="selectcolor(colors)"></button>
+            </div>
         </div>
     </mat-menu>
     
