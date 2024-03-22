@@ -9,6 +9,7 @@ import { MatDialog } from '@angular/material/dialog';
 })
 export class DisplaynoteComponent{
   @Output() refreshUpdateNotes=new EventEmitter<string>();
+
   constructor(public dialog:MatDialog){}
   message:any
   @Input() notesList:any;

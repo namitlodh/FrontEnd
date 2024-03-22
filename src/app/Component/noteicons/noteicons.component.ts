@@ -35,12 +35,16 @@ export class NoteiconsComponent implements OnInit{
     })
   }
   colorArray:Array<any>=[
+    {code:'#ffffff',name:'white'},
     {code:'#FF6347',name:'Tomato'},
     {code:'#FF4500',name:'OrangeRed'},
     {code:'#FFFF00',name:'yellow'},
+    {code:'#ADFF2F',name:'greenyellow'},
     {code:'#7FFFD4',name:'Aquamarine'},
-    {code:'#ffffff',name:'white'},
-    {code:'#D3D3D3',name:'grey'}
+    {code:'#D3D3D3',name:'grey'},
+    {code:'#BC8F8F',name:'RosyBrown'},
+    {code:'#E91E63',name:'Pink'},
+    {code:'#E6E6FA',name:'Lavender'}
   ];
   selectcolor(colors:any){
     let reqData={

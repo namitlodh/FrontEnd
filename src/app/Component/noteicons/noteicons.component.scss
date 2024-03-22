@@ -17,13 +17,12 @@
     min-width: 3rem;
     border-radius: 0.313rem;
     padding: 0.313rem;
-    font-size: 24px;
-    font-weight: 900;
+    font-size: 10px;
+    font-weight: 700;
     cursor: pointer;
     border: none;
     background-color: transparent;
     color:rgb(103, 103, 103) ;
-
 }
 // .eig{
 //     text-align: center;
@@ -82,10 +81,30 @@
 //     background-color:rgb(228, 219, 219) ;
    
 // }
-.colors{
+.colorIcon {
+    display: flex;
+    flex-direction: row;
+    width: 30px;
+    height: 30px;
+    border-radius: 5vh;
+    margin: 5px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.colorIcon:focus {
+    outline: none; 
+}
+.colorIcon:hover{
+    background-color: rgb(185, 183, 183);
+}
+.color{
     display: flex;
     
 }
-.colorIcon{
+
+.platte{
     display: flex;
+    //width: 30vw;
+    justify-content: center;
 }
